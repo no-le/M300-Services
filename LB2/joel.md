@@ -14,10 +14,10 @@ Danach gingen wir mit dem Befehl `cd apache2` in das Verzeichnis und haben das D
 Der Inhalt unseres Dockerfiles ist relativ simpel gehalten:
 
 ```
-  FROM ubuntu #**Hierbei geht man einfach von dem gepullten ubuntu Image aus**
-  RUN apt-get update && apt-get install -y apache2 #**Hier wird apache2 installiert**
-  CMD ["apachectl", "-D", "FOREGROUND"] #**Bei dieser Linie wird sichergestellt das apache2 automatisch gestartet wird**
-  EXPOSE 80 #Und zu guter letzt wird noch der Port 80 "freigegeben"**
+  FROM ubuntu #Hierbei geht man einfach von dem gepullten ubuntu Image aus
+  RUN apt-get update && apt-get install -y apache2 #Hier wird apache2 installiert
+  CMD ["apachectl", "-D", "FOREGROUND"] #Bei dieser Linie wird sichergestellt das apache2 automatisch gestartet wird
+  EXPOSE 80 #Und zu guter letzt wird noch der Port 80 "freigegeben"
 ```
 
 ## Super digger
