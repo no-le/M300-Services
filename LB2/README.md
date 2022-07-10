@@ -69,6 +69,10 @@ Persistent steht für anhaltend, dauernd. Bei Containern bedeutet dies, das Cont
 ! Notebook - Home Netzwerk tbd                                  !                 
 +---------------------------------------------------------------+
 
+
+
+
+
 +---------------------------------------------------------------+
 !                                                               !	
 !    +-------------------------+                                !
