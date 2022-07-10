@@ -19,6 +19,14 @@ Der Inhalt unseres Dockerfiles ist relativ simpel gehalten:
   CMD ["apachectl", "-D", "FOREGROUND"] #Bei dieser Linie wird sichergestellt das apache2 automatisch gestartet wird
   EXPOSE 80 #Und zu guter letzt wird noch der Port 80 "freigegeben"
 ```
+Nachdem dieses also auch erstellt wurde, können wir nun also mit folgendem Befehl, das Docker Image erstellen:
+`docker build -t ijoeli/apache2 .`
+
+Wenn dieses erstellt ist, pushen wir diese noch in das eigene Dockerhub Repository mit diesem Befehl:
+`docker push ijoeli/apache2`
+
+Falls man sich vorher nicht schon eingeloggt hat, muss man dies noch tun, damit man die Berechtigungen dazu hat mit dem Befehl:
+`docker login --username=eigenerUsername`
 
 ## Super digger
 
