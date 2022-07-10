@@ -5,7 +5,7 @@ In dieser LB2, die dank dem TOB und einigen technischen Problemen mit den VM's s
 ## Inhaltsverszeichnis
 
 ## Beschreib der genutzten Services
-
+In diesem Kapitel werden die genutzten Services vorgestellt.
 ### Apache 2
 Der Apache HTTP Webserver ist ein open-source Webserver für eine Vielzahl an Betriebssystemene inklusive UNIX und Windows. Veröffentlicht wurde der Apache Webserver in 1995 und seit April 1996 ist er der meistgenutzte Webserver im gesamten Internet. Finden Sie mehr zu Apache über diesen Link:
 
@@ -22,7 +22,17 @@ https://www.mysql.com/de/
 
 Auch hier ist uns der Service nicht unbekannt. In den meisten Datenbankmodulen mussten wir mit MySQL arbeiten. 
 
-## Service-Aufbau
+## Beschreib Container und Docker
+In diesem Kapitel werden Container sowie einige wichtige Begriffe dazu erklärt. 
+### Container
+
+### Docker
+
+### Deklarativ vs Imperativ
+
+### Persistent
+
+## Dokumentation
 
 Text
 
