@@ -20,13 +20,18 @@ MySQL ist ein relationales Open Source Datebankverwaltungssystem welches von Ora
 https://www.mysql.com/de/
 
 
-Auch hier ist uns der Service nicht unbekannt. In den meisten Datenbankmodulen mussten wir mit MySQL arbeiten. 
+Auch hier ist uns der Service bekannt. In den meisten Datenbankmodulen mussten wir mit MySQL arbeiten. 
+
+### PhPmyAdmin
+
+
 
 ## Beschreib Container und Docker
 In diesem Kapitel werden Container sowie einige wichtige Begriffe dazu erklärt. 
 ### Container
-
+Container sind eine Alternativ zu normalen virtuellen Maschinen. Container virtualisieren Anwendungen. Die Anwendungen sind voneinander getrennt, auch wenn sie auf demselben Rechner und Betriebssystem ausgeführt werden. Sie wissen gegenseitig nichts von ihrer Existenz und können nicht auf Daten anderer Container zugreifen. Im Gegensatz zu klassischen virtuellen Maschinen emulieren Container kein eigenes Betriebssystem, sondern nutzen das des Host-Systems. Im Container sind alle zur Ausführung benötigten Dateien, Konfigurationen, Abhängigkeiten und Bibliotheken vorhanden. Es entsteht ein abgegrenztes Paket mit der Laufzeitumgebung der jeweiligen Applikation. 
 ### Docker
+Eine der bekanntesten Container-Lösungen ist Docker. Docker ist eine Open-Source-Software, die 2013 erstmals veröffentlicht wurde und die benötigten Funktionen zur Virtualisierung der Anwendungen und Isolierung der Container auf einem Host-System bereitstellt.
 
 ### Deklarativ vs Imperativ
 
