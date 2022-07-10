@@ -22,14 +22,16 @@ https://www.mysql.com/de/
 
 Auch hier ist uns der Service bekannt. In den meisten Datenbankmodulen mussten wir mit MySQL arbeiten. 
 
-### PhPmyAdmin
+### phpMyAdmin
+phpMyAdmin ist eine gratis Webanwendung für die Verwaltung von MySQL und MariaDB Datenbanken. Die Tabellen der Datenbanken werden mit einem GUI verwaltet. Mit dem Verwaltungstool kann man unter anderem: Tabellen und Datensätze erstellen, bearbeiten, löschen, Daten(banken) importieren und exportieren und SQL Anweisungen direkt ausführen. Finden Sie mehr zu phpMyAdmin über diesen Link:
 
+https://www.phpmyadmin.net/
 
-
+Mit phpMyAdmin haben wir beide noch keine grossen Erfahrungen. 
 ## Beschreib Container und Docker
 In diesem Kapitel werden Container sowie einige wichtige Begriffe dazu erklärt. 
 ### Container
-Container sind eine Alternativ zu normalen virtuellen Maschinen. Container virtualisieren Anwendungen. Die Anwendungen sind voneinander getrennt, auch wenn sie auf demselben Rechner und Betriebssystem ausgeführt werden. Sie wissen gegenseitig nichts von ihrer Existenz und können nicht auf Daten anderer Container zugreifen. Im Gegensatz zu klassischen virtuellen Maschinen emulieren Container kein eigenes Betriebssystem, sondern nutzen das des Host-Systems. Im Container sind alle zur Ausführung benötigten Dateien, Konfigurationen, Abhängigkeiten und Bibliotheken vorhanden. Es entsteht ein abgegrenztes Paket mit der Laufzeitumgebung der jeweiligen Applikation. 
+Container sind eine Alternativ zu normalen virtuellen Maschinen. Container virtualisieren Anwendungen. Die Anwendungen sind voneinander getrennt, auch wenn sie auf demselben Rechner und Betriebssystem ausgeführt werden. Sie wissen gegenseitig nichts von ihrer Existenz und können nicht auf Daten anderer Container zugreifen. Im Gegensatz zu klassischen virtuellen Maschinen emulieren Container kein eigenes Betriebssystem, sondern nutzen das des Host-Systems. Im Container sind alle zur Ausführung benötigten Dateien, Konfigurationen, Abhängigkeiten und Bibliotheken vorhanden.
 ### Docker
 Eine der bekanntesten Container-Lösungen ist Docker. Docker ist eine Open-Source-Software, die 2013 erstmals veröffentlicht wurde und die benötigten Funktionen zur Virtualisierung der Anwendungen und Isolierung der Container auf einem Host-System bereitstellt.
 
