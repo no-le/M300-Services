@@ -12,13 +12,12 @@ Mit dem Befehl `mkdir apache2` haben wir das getan.
 Danach gingen wir mit dem Befehl `cd apache2` in das Verzeichnis und haben das Dockerfile mit `sudo nano Dockerfile` erstellt.
 
 Der Inhalt unseres Dockerfiles ist relativ simpel gehalten:
+
 ```
-{
   FROM ubuntu
   RUN apt-get update && apt-get install -y apache2
   CMD ["apachectl", "-D", "FOREGROUND"]
   EXPOSE 80
-}
 ```
 
 ## Super digger
