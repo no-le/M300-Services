@@ -33,10 +33,27 @@ Jetzt ist also das Image im eigenen Repository drin und man kann damit seine eig
 
 ## Docker build mysql
 
-Bei mysql sind wir fast gleich vorgegangen wie bei dem apache2 image, nur dass man dort
+Bei mysql sind wir fast gleich vorgegangen wie bei dem apache2 image, nur dass man dort nicht mit dem ubuntu Image arbeitet.
 
-asd
+Auch haben wir hier wieder ein neues Verzeichnis erstellt und darin ein Dockerfile.
+`mkdir mysql`
+`cd mysql`
+`sudo nano Dockerfile`
 
+Der Inhalt dieses Dockerfiles sieht auch ein bisschen anderst aus:
+```
+  FROM mysql # Hierbei geht man einfach von dem normalen mysql Image aus
 
+  ENV MYSQL_ROOT_PASSWORD Password1 # Hier setzen wir das Passwort für den mysql root
+
+  EXPOSE 3306 # Und hier wird der Port 3306 "freigegeben"
+```
+
+Wie auch schon vorhin, können wir nun das Image erstellen, und dies dann in das persönliche Repository auf Dockerhub pushen:
+`docker build -t ijoeli/mysql:1.0 .`
+`docker push ijoeli/mysql:1.0`
+
+Mit diesem Image können wir nun auch einen eigenen Container erstellen und das wie folgt:
+`docker run -d --name apache2 --hostname apache2 -p 6603:3306 ijoeli/mysql:1.0`
 
 Wasmer no mache mönd: Persistent mache und Docker Compose file
