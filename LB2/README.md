@@ -45,6 +45,50 @@ Beim imperativen Aufsetzen von Containern wird das erwartete Resultat definiert,
 ### Persistent
 Persistent steht für anhaltend, dauernd. Bei Containern bedeutet dies, das Container heruntergefahren werden können und die Daten trotzdem da bleiben. Somit muss man sich keine Sorgen um Datenverluste machen. 
 
+
+## Aufbau Umgebung
+
++---------------------------------------------------------------+
+!                                                               !	
+!    +-------------------------+                                !
+!    ! Web-Server              !                                !       
+!    ! Port: tbd               !                                !       
+!    ! Volume: tbd             !                                !       
+!    +-------------------------+                                !
+!                                                               !	
+! Container                                                     !	
++---------------------------------------------------------------+
+! Container-Engine: Docker                                      !	
++---------------------------------------------------------------+
+! Gast OS: Ubuntu 16.04                                         !	
++---------------------------------------------------------------+
+! Hypervisor: TBZ Schul-VM                                      !	
++---------------------------------------------------------------+
+! Host-OS: Windows                                              !	
++---------------------------------------------------------------+
+! Notebook - Home Netzwerk tbd                                  !                 
++---------------------------------------------------------------+
+
++---------------------------------------------------------------+
+!                                                               !	
+!    +-------------------------+                                !
+!    ! Datenbank               !                                !       
+!    ! Port: tbd               !                                !       
+!    ! Volume: tbd             !                                !       
+!    +-------------------------+                                !
+!                                                               !	
+! Container                                                     !	
++---------------------------------------------------------------+
+! Container-Engine: Docker                                      !	
++---------------------------------------------------------------+
+! Gast OS: Ubuntu 16.04                                         !	
++---------------------------------------------------------------+
+! Hypervisor: TBZ Schul-VM                                      !	
++---------------------------------------------------------------+
+! Host-OS: Windows                                              !	
++---------------------------------------------------------------+
+! Notebook - Home Netzwerk tbd                                  !                 
++---------------------------------------------------------------+
 ## Dokumentation
 
 Text
