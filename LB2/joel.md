@@ -20,14 +20,23 @@ Der Inhalt unseres Dockerfiles ist relativ simpel gehalten:
   EXPOSE 80 #Und zu guter letzt wird noch der Port 80 "freigegeben"
 ```
 Nachdem dieses also auch erstellt wurde, können wir nun also mit folgendem Befehl, das Docker Image erstellen:
-`docker build -t ijoeli/apache2 .`
+`docker build -t ijoeli/apache2:1.0 .`
 
 Wenn dieses erstellt ist, pushen wir diese noch in das eigene Dockerhub Repository mit diesem Befehl:
-`docker push ijoeli/apache2`
+`docker push ijoeli/apache2:1.0`
 
 Falls man sich vorher nicht schon eingeloggt hat, muss man dies noch tun, damit man die Berechtigungen dazu hat mit dem Befehl:
 `docker login --username=eigenerUsername`
 
-## Super digger
+Jetzt ist also das Image im eigenen Repository drin und man kann damit seine eigenen Container nun erstellen:
+`docker run -d --name apache2 --hostname apache2 -p 8080:80 ijoeli/apache2:1.0`
+
+## Docker build mysql
+
+Bei mysql sind wir fast gleich vorgegangen wie bei dem apache2 image, nur dass man dort
 
 asd
+
+
+
+Wasmer no mache mönd: Persistent mache und Docker Compose file
