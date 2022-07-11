@@ -16,7 +16,6 @@
 
 ## phpMyAdmin
 
-
 | Testfall NR.  | Beschreibung |  Vorgehen  |  Voraussetzung / Umfeld  |  Erwartetes Resulat  |  OK / nicht OK  |  Aufgetretene Fehler / Bemerkungen  |
 |----------|-------------|-------|-----|-----|-----|-----|
 | 1 | tbd. | tbd. | tbd. | tbd. | OK | x |
