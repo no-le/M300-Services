@@ -56,4 +56,58 @@ Wie auch schon vorhin, können wir nun das Image erstellen, und dies dann in das
 Mit diesem Image können wir nun auch einen eigenen Container erstellen und das wie folgt:
 `docker run -d --name apache2 --hostname apache2 -p 6603:3306 ijoeli/mysql:1.0`
 
-Wasmer no mache mönd: Persistent mache und Docker Compose file
+## Docker Build phpmyadmin
+
+
+## Docker Compose
+Zu guter letzt, haben wir unserem Docker Compose file gewidmet. Als aller erstes müssen wir docker-compose einmal installieren, da es nicht auf den TBZ-VM's vorinstalliert ist:
+`apt-install docker-compose`
+
+Danach haben wir auch wieder ein neues Verzeichnis erstellt mit dem Namen compose, und darin ein .yaml file erstellt, da docker-compose damit arbeitet:
+`mkdir compose`
+`cd compose`
+`sudo nano docker-compose.yaml`
+
+Das docker-compose file haben wir mit ein paar Recherchen und eigenen Inputs so erstellt, das es für uns passt:
+
+```
+version: '1'
+
+services:
+  apache2:
+    image: ijoeli/apache2:1.1
+    container_name: apache2
+    ports:
+      - 8888:80
+    volumes:
+      - apache2:/var/www/html
+  db:
+    image: ijoeli/mysql:1.0
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: Password1
+      MYSQL_DATABASE: test_db
+      MYSQL_USER: test_db
+      MYSQL_PASSWORD: Password1
+    ports:
+      - "6603:3306"
+    volumes:
+      - mysql:/var/lib/mysql
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    links:
+      - db
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+      PMA_ARBITRARY: 1
+    restart: always
+    ports:
+      - 8081:80
+volumes:
+  mysql:
+  apache2:
+```
+
+In dem docker-compose file wird mithilfe der Volumes auch direkt sichergestellt, dass die wichtigen Services persistent sind.
