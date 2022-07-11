@@ -3,54 +3,27 @@ In dieser LB2, die dank dem TOB und einigen technischen Problemen mit den VM's s
 # Inhaltsverszeichnis
 
 ## [A: Beschreib der genutzten Services](A/README.md)
-- In diesem Kapitel werden die genutzten Services vorgestellt.
+- Vorstellung der genutzten Services.
 
-## [I: Know-How & Begriffe](I/README.md)
-- Virtual Hosts
-- DNS
-- Angaben über einen beliebigen fremden Server herausfinden
-- Proxy
-- DMZ
+## [B: Aufbau der Umgebung](B/README.md)
+- Visuelle Ansicht der Umgebungen, welche wir aufgebaut haben.
 
-## [V: Vorgaben (Security / Service Operation)](V/README.md)
-- Sicherheitskonzept
-- Gefahren und Risiken
-- Betriebskonzept
 
-## [SW1: Webserver installieren/konfigurieren](SW1/README.md)
-- Webserver wurde aufgesetzt, konfiguriert und getestet (nicht XAMPP!)    --> Kriterien siehe "Hilfen zu Kompetenzraster"
+## [C: Dokumentation)](C/README.md)
+- Dokumentation der Containerumgebung.
 
-## [SW2: Mailserver installieren/konfigurieren](SW2/README.md)
-- Mailserver wurde aufgesetzt, konfiguriert und getestet   --> Kriterien siehe "Hilfen zu Kompetenzraster"
+## [D: Testing](D/README.md)
+- Testing der verschiedenen Umgebungen.
 
-## [SW3: Weiterer Serverdienst installieren/konfigurieren](SW3/README.md)
-- Weiterer Server (Streaming/FTP/WebDAV)
-- Ein CMS mit Datenbankanbindung wurde aufgesetzt, konfiguriert und getestet.
+## [E: Fazit](E/README.md)
+- Fazit des Projektes.
 
-## [SW4: Protokollierung](SW4/README.md)
-- Einstellungsmöglichkeiten/Ablageort der Logfiles wurde beschrieben
-- Möglichkeiten für die Konfiguration (Formatierung, was wird geloggt) des Logfiles wurden beschrieben
+## [F: Reflexion](F/README.md)
+- Reflexion der geleisteten Arbeit.
 
-## [B1: Benutzerkonzept & -Umsetzung](B1/README.md)
-- Benutzerkonzept (Zugriffe/Berechtigungen) wurde erstellt
-- Umsetzung wurde beschrieben
-- Test für die korrekte Vergabe der Berechtigung bei der Erstellung von neuen Dateien wurde durchgeführt und beschrieben
- 
-## [B2: Zertifikate](B2/README.md)
-- Zertifikat für Webserver wurde erstellt
-- Installierter Webserver ist über HTTPS erreichbar
-- Umleitung von HTTP-Aufruf auf HTTPS wurde definiert
+## [G: Quellen](G/README.md)
+- Quellenverzeichnis.
 
-## [T: Testing](T/README.md)
-- Funktionstests (Service / Applikation) wurde auf sämtlichen Layern definiert und durchgeführt (nicht nur "OK" oder "NOK")
-- Sicherheitstests wurden definiert und durchgeführt
-
-## [Tagesjournal](Tagesjournal/README.md)
-- Tägliche Arbeit notieren
-- Übersicht für LP
-  
-## [Reflexion](R/README.md)
-- Lernprozess festgehalten (Form frei wählbar)
 
 
 - - -
