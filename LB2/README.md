@@ -8,7 +8,7 @@ In dieser LB2, die dank dem TOB und einigen technischen Problemen mit den VM's s
 ## [C: Beschreib von Container, Docker und wichtigen Begriffen](C/README.md)
 - Erklärung von Containern, Docker und wichtigen Begriffen.
 
-## [U: Aufbau der Umgebungen)](U/README.md)
+## [U: Aufbau der Umgebungen](U/README.md)
 - Visuelle Ansicht der Umgebungen, welche wir aufgebaut haben.
 
 ## [D: Dokumentation](D/README.md)
