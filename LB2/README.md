@@ -1,132 +1,59 @@
-# Einleitung
-
+# Einleitung allgemein
 In dieser LB2, die dank dem TOB und einigen technischen Problemen mit den VM's sehr verkürzt wurde, werden wir ein eigenes Dockerimage erstellen und dies auf Dockerhub pushen. Wir haben uns dafür entschieden, einen Apache Webserver via Docker aufzusetzen. Diesen verbinden wir dann mit einer MySQL Datenbank. Die Container werden persisitent und deklarativ aufgsetzt. 
+# Inhaltsverszeichnis
 
-## Inhaltsverszeichnis
+## [A: Beschreib der genutzten Services](A/README.md)
+- In diesem Kapitel werden die genutzten Services vorgestellt.
 
-## Beschreib der genutzten Services
-In diesem Kapitel werden die genutzten Services vorgestellt.
-### Apache 2
-Der Apache HTTP Webserver ist ein open-source Webserver für eine Vielzahl an Betriebssystemene inklusive UNIX und Windows. Veröffentlicht wurde der Apache Webserver in 1995 und seit April 1996 ist er der meistgenutzte Webserver im gesamten Internet. Finden Sie mehr zu Apache über diesen Link:
+## [I: Know-How & Begriffe](I/README.md)
+- Virtual Hosts
+- DNS
+- Angaben über einen beliebigen fremden Server herausfinden
+- Proxy
+- DMZ
 
-https://httpd.apache.org/
+## [V: Vorgaben (Security / Service Operation)](V/README.md)
+- Sicherheitskonzept
+- Gefahren und Risiken
+- Betriebskonzept
+
+## [SW1: Webserver installieren/konfigurieren](SW1/README.md)
+- Webserver wurde aufgesetzt, konfiguriert und getestet (nicht XAMPP!)    --> Kriterien siehe "Hilfen zu Kompetenzraster"
+
+## [SW2: Mailserver installieren/konfigurieren](SW2/README.md)
+- Mailserver wurde aufgesetzt, konfiguriert und getestet   --> Kriterien siehe "Hilfen zu Kompetenzraster"
+
+## [SW3: Weiterer Serverdienst installieren/konfigurieren](SW3/README.md)
+- Weiterer Server (Streaming/FTP/WebDAV)
+- Ein CMS mit Datenbankanbindung wurde aufgesetzt, konfiguriert und getestet.
+
+## [SW4: Protokollierung](SW4/README.md)
+- Einstellungsmöglichkeiten/Ablageort der Logfiles wurde beschrieben
+- Möglichkeiten für die Konfiguration (Formatierung, was wird geloggt) des Logfiles wurden beschrieben
+
+## [B1: Benutzerkonzept & -Umsetzung](B1/README.md)
+- Benutzerkonzept (Zugriffe/Berechtigungen) wurde erstellt
+- Umsetzung wurde beschrieben
+- Test für die korrekte Vergabe der Berechtigung bei der Erstellung von neuen Dateien wurde durchgeführt und beschrieben
+ 
+## [B2: Zertifikate](B2/README.md)
+- Zertifikat für Webserver wurde erstellt
+- Installierter Webserver ist über HTTPS erreichbar
+- Umleitung von HTTP-Aufruf auf HTTPS wurde definiert
+
+## [T: Testing](T/README.md)
+- Funktionstests (Service / Applikation) wurde auf sämtlichen Layern definiert und durchgeführt (nicht nur "OK" oder "NOK")
+- Sicherheitstests wurden definiert und durchgeführt
+
+## [Tagesjournal](Tagesjournal/README.md)
+- Tägliche Arbeit notieren
+- Übersicht für LP
+  
+## [Reflexion](R/README.md)
+- Lernprozess festgehalten (Form frei wählbar)
 
 
-Passend dazu wurde Apache schon oft in Modulen der TBZ eingesetzt. Dies ist ebenfalls ein Grund für die Auswahl dieses Services. 
+- - -
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/ch/"><img alt="Creative Commons Lizenzvertrag" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/3.0/ch/88x31.png" /></a><br />Dieses Werk ist lizenziert unter einer <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/ch/">Creative Commons Namensnennung - Nicht-kommerziell - Weitergabe unter gleichen Bedingungen 3.0 Schweiz Lizenz</a>
 
-### MySQL Datenbank
-MySQL ist ein relationales Open Source Datebankverwaltungssystem welches von Oracle entwickelt und unterstützt wird. Eingeführt wurde es wie Apache im Jahre 1995. Seit 2010 gehört MySQL zur Oracle Corporation. Finden Sie mehr zu MySQL über diesen Link:
-
-https://www.mysql.com/de/
-
-
-Auch hier ist uns der Service bekannt. In den meisten Datenbankmodulen mussten wir mit MySQL arbeiten. 
-
-### phpMyAdmin
-phpMyAdmin ist eine gratis Webanwendung für die Verwaltung von MySQL und MariaDB Datenbanken. Die Tabellen der Datenbanken werden mit einem GUI verwaltet. Mit dem Verwaltungstool kann man unter anderem: Tabellen und Datensätze erstellen, bearbeiten, löschen, Daten(banken) importieren und exportieren und SQL Anweisungen direkt ausführen. Finden Sie mehr zu phpMyAdmin über diesen Link:
-
-https://www.phpmyadmin.net/
-
-Mit phpMyAdmin haben wir beide noch keine grossen Erfahrungen. 
-## Beschreib Container und Docker
-In diesem Kapitel werden Container sowie einige wichtige Begriffe dazu erklärt. 
-### Container
-Container sind eine Alternativ zu normalen virtuellen Maschinen. Container virtualisieren Anwendungen. Die Anwendungen sind voneinander getrennt, auch wenn sie auf demselben Rechner und Betriebssystem ausgeführt werden. Sie wissen gegenseitig nichts von ihrer Existenz und können nicht auf Daten anderer Container zugreifen. Im Gegensatz zu klassischen virtuellen Maschinen emulieren Container kein eigenes Betriebssystem, sondern nutzen das des Host-Systems. Im Container sind alle zur Ausführung benötigten Dateien, Konfigurationen, Abhängigkeiten und Bibliotheken vorhanden.
-### Docker
-Eine der bekanntesten Container-Lösungen ist Docker. Docker ist eine Open-Source-Software, die 2013 erstmals veröffentlicht wurde und die benötigten Funktionen zur Virtualisierung der Anwendungen und Isolierung der Container auf einem Host-System bereitstellt.
-
-#### Docker-Images
-Sammlung von Software, die als Container ausgeführt werden soll, der eine Reihe von Anweisungen zum Erstellen eines Containers enthält, der auf der Docker-Plattform ausgeführt werden kann. Bilder können nicht geändert werden, und Änderungen an einem Image erfordern die Erstellung eines neuen Images.
-
-### Deklarativ vs Imperativ
-Beim deklarativen Aufsetzen von Containern geht es darum, dem Container einen genauen Ablauf zu vermitteln, welcher der Container ausführt. 
-
-Beim imperativen Aufsetzen von Containern wird das erwartete Resultat definiert, nicht die hierfür nötigen Schritte. 
-### Persistent
-Persistent steht für anhaltend, dauernd. Bei Containern bedeutet dies, das der Container heruntergefahren werden kann und die Daten trotzdem da bleiben. Somit muss man sich keine Sorgen um Datenverluste machen. 
-
-
-## Aufbau Umgebung
-
-```
-+---------------------------------------------------------------+
-!                                                               !	
-!    +-------------------------+                                !
-!    ! Web-Server              !                                !       
-!    ! Port: tbd               !                                !       
-!    ! Volume: tbd             !                                !       
-!    +-------------------------+                                !
-!                                                               !	
-! Container                                                     !	
-+---------------------------------------------------------------+
-! Container-Engine: Docker                                      !	
-+---------------------------------------------------------------+
-! Gast OS: Ubuntu 16.04                                         !	
-+---------------------------------------------------------------+
-! Hypervisor: TBZ Schul-VM                                      !	
-+---------------------------------------------------------------+
-! Host-OS: Windows                                              !	
-+---------------------------------------------------------------+
-! Notebook - Home Netzwerk tbd                                  !                 
-+---------------------------------------------------------------+
-```
-
-```
-+---------------------------------------------------------------+
-!                                                               !	
-!    +-------------------------+                                !
-!    ! Datenbank               !                                !       
-!    ! Port: tbd               !                                !       
-!    ! Volume: tbd             !                                !       
-!    +-------------------------+                                !
-!                                                               !	
-! Container                                                     !	
-+---------------------------------------------------------------+
-! Container-Engine: Docker                                      !	
-+---------------------------------------------------------------+
-! Gast OS: Ubuntu 16.04                                         !	
-+---------------------------------------------------------------+
-! Hypervisor: TBZ Schul-VM                                      !	
-+---------------------------------------------------------------+
-! Host-OS: Windows                                              !	
-+---------------------------------------------------------------+
-! Notebook - Home Netzwerk tbd                                  !                 
-+---------------------------------------------------------------+
-```
-
-```
-+---------------------------------------------------------------+
-!                                                               !	
-!    +-------------------------+                                !
-!    ! phpMyAdmin              !                                !       
-!    ! Port: tbd               !                                !       
-!    ! Volume: tbd             !                                !       
-!    +-------------------------+                                !
-!                                                               !	
-! Container                                                     !	
-+---------------------------------------------------------------+
-! Container-Engine: Docker                                      !	
-+---------------------------------------------------------------+
-! Gast OS: Ubuntu 16.04                                         !	
-+---------------------------------------------------------------+
-! Hypervisor: TBZ Schul-VM                                      !	
-+---------------------------------------------------------------+
-! Host-OS: Windows                                              !	
-+---------------------------------------------------------------+
-! Notebook - Home Netzwerk tbd                                  !                 
-+---------------------------------------------------------------+
-```
-
-## Dokumentation
-
-## Testing
-
-| Testfall NR.  | Beschreibung |  Vorgehen  |  Voraussetzung / Umfeld  |  Erwartetes Resulat  |  OK / nicht OK  |  Aufgetretene Fehler / Bemerkungen  |
-|----------|-------------|-------|-----|-----|-----|-----|
-| 1 | Webseite ist aufrufbar per IP. | Im Internetbrowser mit der IP die Webseite aufrufen. | Webserver installiert. | Man kommt auf die Webseite mit der IP Adresse. | OK | x |
-| 2 | Webseite ist aufrufbar per DDNS. | Im Internetbrowser mit der DDNS-Adresse die Webseite aufrufen. | Webserver installiert und konfiguiert, DDNS Weiterleitung auf Router und NO-IP gemacht. | Man kommt auf die Webseite mit der DDNS Adresse. | OK | x |
-| 3 | Webseite wird richtig angezeigt und per HTTPS weitergeleitet. | Auf die Webseite https://kochmannklg.ddns.net gehen. | Server richtig aufgesetzt, das HTML File bearbeitet und die Redirection konfiguriert. | Die richtige Webseite wird angezeigt und das mit HTTPS. | OK | x |
-
-## Quellen
-
-Text
+- - -
