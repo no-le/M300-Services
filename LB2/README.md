@@ -99,7 +99,7 @@ Persistent steht für anhaltend, dauernd. Bei Containern bedeutet dies, das der 
 +---------------------------------------------------------------+
 !                                                               !	
 !    +-------------------------+                                !
-!    ! phpMyAdmin               !                                !       
+!    ! phpMyAdmin              !                               !       
 !    ! Port: tbd               !                                !       
 !    ! Volume: tbd             !                                !       
 !    +-------------------------+                                !
