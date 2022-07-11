@@ -55,7 +55,7 @@ Persistent steht für anhaltend, dauernd. Bei Containern bedeutet dies, das der 
 | 2 | Datenbank | tbd | tbd |
 | 3 | phpMyAdmin | tbd | tbd |
 
-
+```
 +---------------------------------------------------------------+
 !                                                               !	
 !    +-------------------------+                                !
@@ -76,7 +76,7 @@ Persistent steht für anhaltend, dauernd. Bei Containern bedeutet dies, das der 
 +---------------------------------------------------------------+
 ! Notebook - Home Netzwerk tbd                                  !                 
 +---------------------------------------------------------------+
-
+```
 
 
 +---------------------------------------------------------------+
