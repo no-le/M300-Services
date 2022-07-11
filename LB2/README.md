@@ -49,6 +49,12 @@ Persistent steht für anhaltend, dauernd. Bei Containern bedeutet dies, das der 
 ## Aufbau Umgebung
 
 
+| Nummer | Name | Port | Volume |
+|---|---|---|---|
+| 1 | Web-Server | tbd | tbd |
+| 2 | Datenbank | tbd | tbd |
+| 3 | phpMyAdmin | tbd | tbd |
+
 
 +---------------------------------------------------------------+
 !                                                               !	
