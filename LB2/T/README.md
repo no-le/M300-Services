@@ -21,5 +21,5 @@
 | 1 | Läuft der Container? | docker ps | Docker-Compose hat funktioniert. | Container läuft. | OK | x |
 | 2 | Zugriff von Aussen. | Portforwarding einrichten. | Portforwarding richtig konfiguriert. | Man kommt auf die Seite. | OK | x |
 
-
+[Zurück zur Übersicht](../README.md)
 
