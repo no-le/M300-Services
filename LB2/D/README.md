@@ -57,7 +57,7 @@ Mit diesem Image können wir nun auch einen eigenen Container erstellen und das 
 `docker run -d --name apache2 --hostname apache2 -p 6603:3306 ijoeli/mysql:1.0`
 
 ## Docker Build phpmyadmin
-
+Bei phpmyadmin haben wir recherchiert, wie man selber ein Image mithilfe eines Dockerfiles bauen kann, aber dies war gegen Ende ein bisschen zu kompliziert, weshalb wir uns schlussendlich im compose file für das normale phpmyadmin image entschieden haben.
 
 ## Docker Compose
 Zu guter letzt, haben wir unserem Docker Compose file gewidmet. Als aller erstes müssen wir docker-compose einmal installieren, da es nicht auf den TBZ-VM's vorinstalliert ist:
